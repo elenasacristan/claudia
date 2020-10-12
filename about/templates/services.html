@@ -1,4 +1,55 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+
 {% block content %}
-Services
-{% endblock  %}
+
+<div class="services">
+  <div class="container">
+    {% for service in services %} 
+        {% if forloop.counter|divisibleby:2 %}
+            <hr />
+            <div class="row service">
+                <div class="col-12 order-2 order-lg-1 col-lg-5 d-flex">
+                    <div class="help-block m-auto">
+                    <h5 class="mb-4">{{service.subheading}}</h5>
+                    <ul class="text-left">
+                    {% for bullet in bullets %}
+                        {% if service.heading == bullet.service.heading %}
+                            <li>{{bullet.description}}</li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-12 order-1 order-lg-2 offset-lg-1 col-lg-6 mb-5">
+                    <h2>{{service.heading}}</h2>
+                    <i class="fa fa-dollar p-4"></i>
+                    <p class="text-left ">{{service.description}}</p>
+                </div>
+            </div>
+        {% else %}
+            <div class="row mb-5 service">
+                <div class="col-12 col-lg-6 mb-5">
+                    <h2>{{service.heading}}</h2>
+                    <i class="fa fa-line-chart p-4"></i>
+                    <p class="text-left">{{service.description}}</p>
+                </div>
+                <div class="col-12 offset-lg-1 col-lg-5 d-flex">
+                    <div class="help-block m-auto">
+                    <h5 class="mb-4">{{service.subheading}}</h5>
+                    <ul class="text-left mb-5">
+                    {% for bullet in bullets %}
+                        {% if service.heading == bullet.service.heading %}
+                            <li>{{bullet.description}}</li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        {% endif %} 
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

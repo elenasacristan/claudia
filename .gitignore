@@ -5,3 +5,8 @@ env.py
 *.sqlite3
 __pycache__
 *.pyc
+
+templates/base copy.html
+static/css/cover.css
+static/css/styles.css
+static/js/scripts.js

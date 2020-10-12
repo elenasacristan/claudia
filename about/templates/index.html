@@ -1,4 +1,17 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+
+{% load static %}
+
 {% block content %}
-Index
-{% endblock  %}
+
+<main role="main" class="index inner container">
+  <h1 class="cover-heading mb-4">{{index.heading}} <strong>{{index.name}}</strong></>!</h1>
+  <p class="lead mb-4 description-index">
+    {{index.description1}} <strong>{{index.jobtitle}}</strong> {{index.description2}}
+  </p>
+  <p class="lead">
+    <a href="#" class="btn btn-lg cta-index">{{index.cta}}</a>
+  </p>
+</main>
+
+{% endblock %}
