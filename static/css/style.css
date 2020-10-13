@@ -1,181 +1,211 @@
 body {
-    background-image: url("../assets/img/header-bg.jpg");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
+  background-image: url("../assets/img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
 .container-fluid {
-    padding: 0px;
+  padding: 0px;
 }
 
 main {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* navbar */
 
 .bg-light {
-    background-color: #f8f9fad0!important;
+  background-color: #f8f9fad0 !important;
 }
 
 .navbar-light .navbar-toggler {
-    color: transparent;
-    border-color: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    transition: all 0.5s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #9c6479;
 }
 
 .navbar-toggler:focus {
-    color: transparent;
-    border-color: transparent;
-    outline: none;
+  color: transparent;
+  border-color: transparent;
+  outline: none;
 }
 
 .navbar-collapse {
-    justify-content: center;
+  justify-content: center;
 }
 
 /* index */
 
 .index h1 {
-    font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 .index .lead {
-    font-size: 1.05rem;
+  font-size: 1.05rem;
 }
 
 .description-index {
-    max-width: 500px;
-    margin: 0px auto;
+  max-width: 500px;
+  margin: 0px auto;
 }
 
 .cta-index {
-    background-color: #9c6479;
-    color: white;
-    transition: all 0.8s ease;
+  background-color: #9c6479;
+  color: white;
+  transition: all 0.8s ease;
 }
 
 .cta-index:hover {
-    background-color: #b18595;
-    color: white;
+  background-color: #b18595;
+  color: white;
 }
 
-@media only screen and (min-width:600px) {
-    .index h1 {
-        font-size: 2.5rem
-    }
-    .index .lead {
-        font-size: 1.25rem;
-    }
-    .cta-index {
-        width: 350px;
-    }
-    .cta-index:hover {
-        width: 400px;
-    }
+@media only screen and (min-width: 600px) {
+  .index h1 {
+    font-size: 2.5rem;
+  }
+  .index .lead {
+    font-size: 1.25rem;
+  }
+  .cta-index {
+    width: 350px;
+  }
+  .cta-index:hover {
+    width: 400px;
+  }
 }
 
 /* services */
 
 .services {
-    height: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #9c6479de;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #9c6479de;
 }
 
 .services .fa {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .services .col-lg-6 {
-    color: white;
+  color: white;
 }
 
 .services h5 {
-    color: #9c6479;
+  color: #9c6479;
 }
 
 .services .help-block {
-    font-size: 0.8rem;
-    padding: 10%;
-    border-radius: 15px;
-    background-color: white;
-    color: #797878;
+  font-size: 0.8rem;
+  padding: 10%;
+  border-radius: 15px;
+  background-color: white;
+  color: #797878;
 }
 
 .services ul {
-    margin: 0;
-    padding-left: 20px;
+  margin: 0;
+  padding-left: 20px;
 }
 
 .services li {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /*about*/
 
 .about {
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.924);
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.924);
 }
 
 .about h2 {
-    color: #9c6479;
+  color: #9c6479;
 }
 
 .about h5 {
-    color: #474747;
+  color: #474747;
 }
 
 .about p {
-    color: #797878;
+  color: #797878;
 }
 
 /* contact */
 
 section#contact {
-    height: 100vh;
-    background-color: #212529;
-    background-image: url("../assets/img/map-image.png");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
+  height: 100vh;
+  background-color: #8f8f8f96;
+  /* background-image: url("../assets/img/map-image.png"); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#contact .inputs {
+  justify-content: space-between;
+}
+
+section#contact .form-group {
+  margin-bottom: 0rem;
 }
 
 section#contact .section-heading {
-    color: #fff;
+  color: #fff;
+}
+section#contact .form-group {
+  margin-bottom: 1.5rem;
+}
+section#contact form#contactForm .form-group input,
+section#contact form#contactForm .form-group textarea {
+  padding: 1.5rem;
+  border: none;
+}
+section#contact form#contactForm .form-group input.form-control {
+  height: auto;
+}
+section#contact form#contactForm .form-group-textarea {
+  height: 100%;
+}
+section#contact form#contactForm .form-group-textarea textarea {
+  height: 100%;
+  min-height: 10rem;
+}
+section#contact form#contactForm p.help-block {
+  margin: 0;
+}
+section#contact form#contactForm .form-control:focus {
+  border-color: #fed136;
+  box-shadow: none;
+}
+
+@media only screen and (min-width: 767px) {
+  section#contact .form-group {
+    margin-bottom: 0rem;
   }
-  section#contact form#contactForm .form-group {
-    margin-bottom: 1.5rem;
-  }
-  section#contact form#contactForm .form-group input,
-  section#contact form#contactForm .form-group textarea {
-    padding: 1.25rem;
-  }
-  section#contact form#contactForm .form-group input.form-control {
-    height: auto;
-  }
-  section#contact form#contactForm .form-group-textarea {
-    height: 100%;
-  }
-  section#contact form#contactForm .form-group-textarea textarea {
-    height: 100%;
-    min-height: 10rem;
-  }
-  section#contact form#contactForm p.help-block {
-    margin: 0;
-  }
-  section#contact form#contactForm .form-control:focus {
-    border-color: #fed136;
-    box-shadow: none;
-  }
-  section#contact form#contactForm ::-webkit-input-placeholder {
+}
+
+/* section#contact form#contactForm ::-webkit-input-placeholder {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     color: #ced4da;
@@ -194,4 +224,11 @@ section#contact .section-heading {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     color: #ced4da;
+  } */
+
+  .footer {
+      background-color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
