@@ -5,13 +5,12 @@
 <section class="page-section d-flex" id="contact">
   <div class="container m-auto">
     <div class="text-center">
-      <h2 class="section-heading text-uppercase mb-5">Contact Me</h2>
-      {% comment %} <h3 class="section-subheading text-muted lead mb-4">My passion is online marketing, Why don’t we do something together?</h3> {% endcomment %}
+      <h2 class="section-heading text-uppercase mb-4">Contact Me</h2>
     </div>
-    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+    <form method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
       {% csrf_token %}
 
-      <div class="row align-items-stretch mb-5">
+      <div class="row align-items-stretch mb-4">
         <div class="col-md-6 d-flex flex-column inputs">
           <div class="form-group">{{contact_form.name}}</div>
 
@@ -28,7 +27,7 @@
       <div class="text-center">
         <div id="success"></div>
         <button
-          class="btn btn-lg text-uppercase btn-lg cta-index"
+          class="btn btn-lg text-uppercase btn-lg cta-button"
           id="sendMessageButton"
           type="submit"
         >
