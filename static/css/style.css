@@ -58,6 +58,7 @@ main strong {
 .index {
   margin-top: 5vh;
 }
+
 .index h1 {
   font-size: 1.5rem;
 }
@@ -106,7 +107,7 @@ main strong {
 }
 
 .services .fa {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .services .col-lg-6 {
@@ -154,11 +155,6 @@ main strong {
   color: #797878;
 }
 
-@media only screen and (min-width: 1200px) {
-  .about {
-    height: 90vh;
-  }
-}
 
 /* contact */
 

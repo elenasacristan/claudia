@@ -10,7 +10,7 @@ class Index(models.Model):
 
     class Meta:
         verbose_name_plural = ("Index Content")
-    
+
     def __str__(self):
         return format(self.heading)
 
@@ -21,6 +21,9 @@ class Services(models.Model):
 
     class Meta:
         verbose_name_plural = ("Services")
+    
+    def description_as_list(self):
+        return self.description.split('\n')
 
     def __str__(self):
         return "{} - {}".format(self.heading, self.description[:20])
@@ -44,6 +47,9 @@ class About(models.Model):
 
     class Meta:
         verbose_name_plural = ("About Section")
+
+    def description_as_list(self):
+        return self.description.split('\n')
 
     def __str__(self):
         return "{} - {}".format(self.heading, self.description[:20])

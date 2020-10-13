@@ -4,7 +4,9 @@
     <div class="container m-auto d-flex flex-column">
         <h2 class="text-center mb-4">{{about.heading}}</h2>
         <h5 class="mb-3">{{about.subheading}}</h5>
-        <p>{{about.description}}</p>
+        {% for paragraph in about.description_as_list %}
+                <p>{{paragraph}}</p>
+        {% endfor %}
         <p class="text-center mb-4 lead">{{about.sentence_bottom}}</p>
         <a href="#" class="btn btn-lg cta-button m-auto">{{about.cta}}</a>
     </div> 
