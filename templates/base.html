@@ -17,9 +17,15 @@
     <title>Claudia Delgado</title>
 
     <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Dosis:wght@300;600&family=Playfair+Display:wght@900&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    {% comment %}
+    <link
       rel="canonical"
       href="https://getbootstrap.com/docs/4.5/examples/cover/"
     />
+    {% endcomment %}
 
     <!-- FontAwesome -->
     <link
@@ -53,56 +59,65 @@
       }
     </style>
     <!-- Custom styles for this template -->
+    {% comment %}
     <link href="cover.css" rel="stylesheet" />
+    {% endcomment %}
   </head>
   <body class="text-center">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" href="{% url 'index' %}"
-              >Home <span class="sr-only">(current)</span></a
-            >
-            <a class="nav-link" href="{% url 'about' %}">About</a>
-            <a class="nav-link" href="{% url 'services' %}">Services</a>
-            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a href="{% url 'index' %}" class="logo">
+        <img src="{% static 'assets/img/logo_clau.svg' %}" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="{% url 'index' %}"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+          <a class="nav-link" href="{% url 'services' %}">Services</a>
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
         </div>
-      </nav>
-
-      <div class="alert-success">
-        {% if messages %} {% for message in messages %} {{message}} {% endfor %}
-        {% endif %}
       </div>
-    {% block content %} {% endblock %}
+    </nav>
 
-    <footer class="footer d-flex">
-      <div class="m-auto">
-        <a
-          class="btn btn-dark btn-social mx-2"
-          href="mailto:claudia.delgado86@gmail.com"
-          target="_blank"
-        >
-          <i class="fa fa-envelope"></i>
-        </a>
-        <a
-          class="btn btn-dark btn-social mx-2"
-          href="https://www.linkedin.com/in/claudia-delgado-16800550/"
-          target="_blank"
-        >
-          <i class="fa fa-linkedin"></i>
-        </a>
-      </div>
+    {% if messages %} {% for message in messages %}
+    <div class="alert-success">{{message}}</div>
+
+    {% endfor %} {% endif %} {% block content %} {% endblock %}
+
+    <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-around">
+      {% comment %} <div class="row"> {% endcomment %}
+        <div class="mysentence p-3">
+          My passion is online marketing, Why don’t we do something together?
+        </div>
+        <div class="social pb-3">
+          <a
+            class="btn btn-dark btn-social mx-2"
+            href="mailto:claudia.delgado86@gmail.com"
+            target="_blank"
+          >
+            <i class="fa fa-envelope"></i>
+          </a>
+          <a
+            class="btn btn-dark btn-social mx-2"
+            href="https://www.linkedin.com/in/claudia-delgado-16800550/"
+            target="_blank"
+          >
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+      {% comment %} </div> {% endcomment %}
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

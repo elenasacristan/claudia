@@ -4,6 +4,15 @@ body {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
 }
 
 .container-fluid {
@@ -20,14 +29,18 @@ main {
 main strong {
   color: #a53661;
 }
-/* navbar */
 
+/* navbar */
 .navbar {
   background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+.navbar img {
+  width: 150px;
 }
 
 .navbar-light .navbar-toggler {
@@ -50,8 +63,24 @@ main strong {
   outline: none;
 }
 
+.alert-success {
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    position: absolute;
+    width: 100%;
+}
+
 .navbar-collapse {
   justify-content: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .logo {
+    position: absolute;
+  }
+  .navbar img {
+    width: 250px;
+  }
 }
 
 /* index */
@@ -70,6 +99,10 @@ main strong {
 .description-index {
   max-width: 500px;
   margin: 0px auto;
+}
+
+.description-index strong{
+    font-weight: bold;
 }
 
 .cta-button {
@@ -155,7 +188,6 @@ main strong {
   color: #797878;
 }
 
-
 /* contact */
 
 section#contact {
@@ -221,7 +253,7 @@ section#contact form#contactForm .form-control:focus {
     height: 90vh;
   }
 }
-
+/* 
 section#contact form#contactForm ::-webkit-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
@@ -249,13 +281,13 @@ section#contact form#contactForm :-ms-input-placeholder {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #b4b4b4;
-}
+} */
 
 .footer {
   position: relative;
   width: 100%;
   bottom: 0;
-  height: 10vh;
+  /* height: 10vh; */
   background-image: linear-gradient(to bottom, #a5a5a5 0%, white 8%);
 
   text-align: center;
@@ -274,3 +306,13 @@ section#contact form#contactForm :-ms-input-placeholder {
 .footer .btn:hover {
   background-color: #5e5d5d;
 }
+
+.footer .mysentence {
+  color: #5e5d5d;
+  font-family: "Caveat", cursive;
+  font-size: 1rem;
+}
+
+/* font-family: 'Caveat', cursive;
+font-family: 'Dosis', sans-serif;
+font-family: 'Raleway', sans-serif; */
