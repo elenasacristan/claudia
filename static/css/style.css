@@ -287,7 +287,6 @@ section#contact form#contactForm :-ms-input-placeholder {
   position: relative;
   width: 100%;
   bottom: 0;
-  /* height: 10vh; */
   background-image: linear-gradient(to bottom, #a5a5a5 0%, white 8%);
 
   text-align: center;
@@ -312,6 +311,12 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-family: "Caveat", cursive;
   font-size: 1rem;
 }
+
+@media only screen and (min-width: 767px) {
+    .footer{
+        height: 10vh;
+    }
+  }
 
 /* font-family: 'Caveat', cursive;
 font-family: 'Dosis', sans-serif;
