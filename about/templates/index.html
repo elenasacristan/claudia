@@ -4,14 +4,25 @@
 
 {% block content %}
 
-<main role="main" class="index inner container">
+<main role="main" class="index inner">
+<div class="container">
+<div class="row pb-5 pb-md-0">
+<div class="col-md-7 d-flex m-auto mt-sm-5 mt-lg-auto">
   <h1 class="cover-heading mb-4">{{index.heading}} <strong>{{index.name}}</strong></>!</h1>
+</div>
+<div class="col-8 col-sm-7 col-md-4 d-flex m-auto">
+  <img class="img-fluid" src="{% static 'assets/img/icon_girl.png' %}" alt="girl icon"/>
+</div>
+</div>
+
   <p class="lead mb-4 description-index">
     {{index.description1}} <strong>{{index.jobtitle}}</strong>{{index.description2}}
   </p>
   <p class="lead">
     <a href="{% url 'contact' %}" class="btn btn-md cta-button">{{index.cta}}</a>
   </p>
+</div>
 </main>
 
 {% endblock %}
+
