@@ -41,7 +41,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'claudia-delgado.herokuapp.com']
 
 
 # Application definition
@@ -94,13 +94,6 @@ WSGI_APPLICATION = 'claudia.wsgi.application'
 DATABASES = {
     'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 
 # Password validation
