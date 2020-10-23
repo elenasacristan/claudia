@@ -275,13 +275,25 @@ p strong {
   min-height: 10rem;
 }
 
+.errorlist{
+  margin:0px;
+  padding: 0px;
+  text-align: left;
+}
+
+.errorlist li{
+  list-style: none;
+  color:#a01515;
+  font-size: 0.8rem;
+}
+
 @media only screen and (min-width: 767px) {
   .contact {
     padding: 0;
     height: 90vh;
   }
-  .container-fluid .form-group {
-    margin-bottom: 0rem;
+  .contact .form-group {
+    margin-bottom: 0;
   }
 }
 
