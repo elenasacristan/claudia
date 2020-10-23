@@ -41,7 +41,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = ['127.0.0.1', 'claudia-delgado.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'claudia-delgado.herokuapp.com']
 
 
 # Application definition
