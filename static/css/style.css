@@ -1,17 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
   background-image: url("../assets/img/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  font-family: "Raleway", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
   font-family: "Playfair Display", serif;
 }
 
@@ -20,27 +20,43 @@ h5 {
 }
 
 main {
-  height: 85vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-main strong {
-  color: #a53661;
+h1 strong {
+  color: #f59d1c;
+}
+
+p strong {
+  color: #9c6479;
+}
+
+@media only screen and (min-width: 767px) {
+  main {
+    height: 85vh;
+  }
 }
 
 /* navbar */
+
 .navbar {
   background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+  padding: 0;
 }
 
 .navbar img {
   width: 150px;
+}
+
+.logo {
+  padding-left: 1rem;
 }
 
 .navbar-light .navbar-toggler {
@@ -52,9 +68,12 @@ main strong {
   transition: all 0.5s ease;
 }
 
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
   color: #9c6479;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  border-bottom: #d9a0b545 3px solid;
 }
 
 .navbar-toggler:focus {
@@ -63,46 +82,55 @@ main strong {
   outline: none;
 }
 
-.alert-success {
-    padding-top: 5vh;
-    padding-bottom: 3vh;
-    position: absolute;
-    width: 100%;
-}
-
 .navbar-collapse {
   justify-content: center;
+}
+
+.alert-success {
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  position: absolute;
+  width: 100%;
 }
 
 @media only screen and (min-width: 992px) {
   .logo {
     position: absolute;
   }
+  .navbar {
+    padding: .5rem 1rem;
+  }
   .navbar img {
     width: 250px;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    border-bottom: none;
   }
 }
 
 /* index */
+
 .index {
-  margin-top: 5vh;
+  background: linear-gradient(to bottom, #d8d8d8 -1%, #ffffff 35%);
+  padding-top: 10vh;
+  padding-bottom: 5vh;
 }
 
 .index h1 {
-  font-size: 1.5rem;
+  color: #626262;
+  font-size: 1.7rem;
 }
 
 .index .lead {
-  font-size: 1.05rem;
+  font-size: 1.05em;
 }
 
 .description-index {
-  max-width: 500px;
   margin: 0px auto;
 }
 
-.description-index strong{
-    font-weight: bold;
+.description-index strong {
+  font-weight: bold;
 }
 
 .cta-button {
@@ -131,47 +159,22 @@ main strong {
   }
 }
 
-/* services */
-
-.services {
-  height: auto;
-  padding: 15vh 4vh 5vh;
-  background-color: #9c6479de;
+@media only screen and (min-width: 767px) {
+  .index {
+    margin-top: 5vh;
+  }
 }
 
-.services .fa {
-  font-size: 5rem;
-}
-
-.services .col-lg-6 {
-  color: white;
-}
-
-.services h5 {
-  color: #9c6479;
-}
-
-.services .help-block {
-  font-size: 0.8rem;
-  padding: 10%;
-  border-radius: 15px;
-  background-color: white;
-  color: #797878;
-}
-
-.services ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.services li {
-  margin-top: 10px;
+@media only screen and (min-width: 1200px) {
+  .index h1 {
+    font-size: 3.5rem;
+  }
 }
 
 /*about*/
 
 .about {
-  padding: 15vh 4vh 5vh;
+  padding: 13vh 4vh 5vh;
   height: auto;
   background-color: rgb(241 241 241);
 }
@@ -188,136 +191,152 @@ main strong {
   color: #797878;
 }
 
+/* services */
+
+.services {
+  background-color: #9c6479de;
+  height: auto;
+  padding: 15vh 4vh 5vh;
+}
+
+.services .fa {
+  font-size: 4rem;
+}
+
+.services .col-lg-6 {
+  color: white;
+}
+
+.services h5 {
+  color: #9c6479;
+}
+
+.services .help-block {
+  font-size: 0.8rem;
+  padding: 8%;
+  border-radius: 10px;
+  background-color: white;
+  color: #797878;
+}
+
+.services ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.services li {
+  margin-top: 10px;
+}
+
 /* contact */
 
-section#contact {
-  padding: 15vh 4vh 5vh;
+.contact {
+  padding: 10vh 4vh 5vh;
   height: auto;
   background-color: #8f8f8f96;
 }
 
-section#contact form {
-  line-height: 1.1rem;
+.contact textarea {
+  line-height: 1rem;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input, .form-group textarea {
   width: 100%;
   border-radius: 5px;
 }
 
-#contact .inputs {
+.contact .inputs {
   justify-content: space-between;
 }
 
-section#contact .form-group {
+/* .contact .form-group {
   margin-bottom: 0rem;
-}
+} */
 
-section#contact .section-heading {
+.contact .section-heading {
   color: #fff;
 }
-section#contact .form-group {
-  margin-bottom: 1.5rem;
+
+.contact .form-group {
+  margin-bottom: 0.8rem;
 }
-section#contact form#contactForm .form-group input,
-section#contact form#contactForm .form-group textarea {
-  padding: 1.5rem;
+
+.contact .form-group input, .contact .form-group textarea {
+  padding: 0.7rem;
   border: none;
 }
-section#contact form#contactForm .form-group input.form-control {
-  height: auto;
-}
-section#contact form#contactForm .form-group-textarea {
+
+.contact .form-group-textarea {
   height: 100%;
 }
-section#contact form#contactForm .form-group-textarea textarea {
+
+.contact .form-group-textarea textarea {
   height: 100%;
   min-height: 10rem;
 }
-section#contact form#contactForm p.help-block {
-  margin: 0;
-}
-section#contact form#contactForm .form-control:focus {
-  border-color: #fed136;
-  box-shadow: none;
-}
 
 @media only screen and (min-width: 767px) {
-  section#contact .form-group {
-    margin-bottom: 0rem;
-  }
-
-  section#contact {
+  .contact {
     padding: 0;
     height: 90vh;
   }
+  .container-fluid .form-group {
+    margin-bottom: 0rem;
+  }
 }
-/* 
-section#contact form#contactForm ::-webkit-input-placeholder {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #b4b4b4;
-}
-section#contact form#contactForm :-moz-placeholder {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #b4b4b4;
-}
-section#contact form#contactForm ::-moz-placeholder {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #b4b4b4;
-}
-section#contact form#contactForm :-ms-input-placeholder {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #b4b4b4;
-} */
+
+
+/* footer */
 
 .footer {
-  position: relative;
   width: 100%;
-  bottom: 0;
-  background-image: linear-gradient(to bottom, #a5a5a5 0%, white 8%);
-
+  background-color: #626262;
   text-align: center;
   font-size: 0.9rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .footer .btn {
-  background-color: #9c6479;
+  background-color: transparent;
   border: none;
   transition: background-color 0.5s ease;
 }
 
-.footer .btn:hover {
-  background-color: #5e5d5d;
+.footer .btn .fa {
+  font-size: 1.3rem;
+  color: #ffffff;
+  transition: background-color 1s ease;
+}
+
+.footer .btn .fa:hover {
+  color: #d3d3d3;
 }
 
 .footer .mysentence {
-  color: #5e5d5d;
-  font-family: "Caveat", cursive;
-  font-size: 1rem;
+  color: white;
+  font-family: 'Anonymous Pro', monospace;
+  width: 80%;
+  font-weight: lighter;
+  font-size: 0.7rem;
+  height: 120px;
+}
+
+.footer p {
+  margin-bottom: 0px;
 }
 
 @media only screen and (min-width: 767px) {
-    .footer{
-        height: 10vh;
-    }
+  .footer {
+    height: 10vh;
   }
+  .footer .mysentence {
+    font-size: 0.9rem;
+    height: auto;
+  }
+}
 
-/* font-family: 'Caveat', cursive;
-font-family: 'Dosis', sans-serif;
-font-family: 'Raleway', sans-serif; */
+@media only screen and (min-width: 991px) {
+  .footer .btn .fa {
+    font-size: 2rem;
+  }
+}
